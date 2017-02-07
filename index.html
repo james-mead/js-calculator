@@ -11,23 +11,99 @@
     <!-- Insert Google font links here * -->
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" /> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="main.css" />
     <!-- Scripts - jQuery, Javascript, Twitter-->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
     <!-- Favicon-->
 </head>
 <body>
-  <div>
-      <div clas="container">
-          <div class="row">
-              <div class="four columns offset-by-four">
-                  <h1>Calculator</h1>
-              </div>
+    <div clas="container">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <div id="display">
+            <h3>Calculator</h3>
+              <p id="entry">0
+              </p>
+              <p id="history">
+              </p>
           </div>
+        </div>
       </div>
-  </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-4">
+          <button type="submit" value="AC">AC</button>
+        </div>
+        <div class="col-md-1">
+          <button type="submit" value="CE">CE</button>
+        </div>
+        <div class="col-md-1">
+          <button type="submit" value="/">÷</button>
+        </div>
+        <div class="col-md-1">
+          <button type="submit" value="*">X</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-4">
+          <button type="submit" value="7">7</button>
+        </div>
+        <div class="col-md-1">
+          <button type="submit" value="8">8</button>
+        </div>
+        <div class="col-md-1">
+          <button type="submit" value="9">9</button>
+        </div>
+        <div class="col-md-1">
+          <button type="submit" value="-">-</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-4">
+          <button type="submit" value="4">4</button>
+        </div>
+        <div class="col-md-1">
+          <button type="submit" value="5">5</button>
+        </div>
+        <div class="col-md-1">
+          <button type="submit" value="6">6</button>
+        </div>
+        <div class="col-md-1">
+          <button type="submit" value="+">+</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-4">
+          <button type="submit" value="1">1</button>
+        </div>
+        <div class="col-md-1">
+          <button type="submit" value="2">2</button>
+        </div>
+        <div class="col-md-1">
+          <button type="submit" value="3">3</button>
+        </div>
+        <div class="col-md-1">
+          <button type="submit" value="=">=</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-4">
+          <button type="submit" value="0">0</button>
+        </div>
+        <div class="col-md-1">
+          <button type="submit" value=".">.</button>
+        </div>
+      </div>
+
+      <!-- end container div -->
+    </div>
 </body>
 
 </html>
