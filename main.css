@@ -1,22 +1,36 @@
 * {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   font-family: 'Share Tech Mono', monospace;
 }
 
 .container {
   position: relative;
-  top: 5rem;
+  top: 60px;
 }
 
-.btn {
+
+table {
   width: 100%;
-  text-align: center;
-  margin: 5px;
+  margin: 20px 0 20px 0;
+  /*width: 100%;*/
 }
 
+td {
+  padding: 5px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+#calculator {
+  border: 1px solid black;
+  border-radius: 10px;
+  min-width: 300px;
+}
 
 #display {
   border: 1px solid black;
+  margin: 10px;
+  background-color: #f4f4f4;
 }
 
 #entry {

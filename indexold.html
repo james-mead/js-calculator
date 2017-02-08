@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Needs-->
+    <title>Calculator</title>
+    <meta charset="UTF-8">
+    <!-- FontAwesome Icons-->
+    <script src="https://use.fontawesome.com/36173e56be.js"></script>
+    <!-- Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <!-- Insert Google font links here * -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" /> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="main.css" />
+    <!-- Scripts - jQuery, Javascript, Twitter-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
+    <!-- Favicon-->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-xs-4 col-xs-offset-4 col-md-4">
+            <div id="display">
+              <h3 class="text-center">Calculator</h3>
+                <p id="entry" class="text-right">0</p>
+                <p id="history" class="text-right">0</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-1 col-xs-offset-4 col-md-1">
+            <button type="submit" class="btn clearall btn-danger" value="AC">AC</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn clearlast btn-danger" value="CE">CE</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn num btn-warning" value=".">.</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn operator btn-warning" value="*">*</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-1 col-xs-offset-4 col-md-1">
+            <button type="submit" class="btn num btn-info" value="7">7</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn num btn-info" value="8">8</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn num btn-info" value="9">9</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn operator btn-warning" value="-">-</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-1 col-xs-offset-4 col-md-1">
+            <button type="submit" class="btn num btn-info" value="4">4</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn num btn-info" value="5">5</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn num btn-info" value="6">6</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn operator btn-warning" value="+">+</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-1 col-xs-offset-4 col-md-1">
+            <button type="submit" class="btn num btn-info" value="1">1</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn num btn-info" value="2">2</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn num btn-info" value="3">3</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn operator btn-warning" value="/">÷</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-1 col-xs-offset-4 col-md-1">
+            <button type="submit" class="btn num btn-info" value="0">0</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn num btn-info" value="(">(</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn num btn-info" value=")">)</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn calculate btn-success" value="=">=</button>
+          </div>
+        </div>
+
+      <!-- end container div -->
+    </div>
+</body>
+
+</html>
