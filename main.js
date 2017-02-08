@@ -4,10 +4,9 @@ $(document).ready(function() {
     var btnVal = $(this).val()
     var entryStr = $("#entry").text()
     var histStr = $("#history").text()
-    
+
     if ($(this).hasClass("calculate")) {
       result = eval($("#history").text());
-      // console.log(result)
       $("#entry").html(result);
       $("#history").append("= " + result);
     }
