@@ -8,6 +8,7 @@
     <!-- FontAwesome Icons-->
     <script src="https://use.fontawesome.com/36173e56be.js"></script>
     <!-- Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
     <!-- Insert Google font links here * -->
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" />
@@ -25,78 +26,86 @@
     <!-- Favicon-->
 </head>
 <body>
-    <div clas="container">
-      <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-          <div id="display">
-            <h3>Calculator</h3>
-              <p id="entry">0</p>
-              <p id="history">0</p>
+    <div class="container">
+      <div class="calculator-wrapper">
+        <div class="row">
+          <div class="col-xs-4 col-md-4 col-md-offset-4">
+            <div id="display">
+              <h3 class="text-center">Calculator</h3>
+                <p id="entry" class="text-right">0</p>
+                <p id="history" class="text-right">0</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-1 col-md-1 col-md-offset-4">
-          <button type="submit" class="btn clearall red" value="AC">AC</button>
+        <div class="row">
+          <div class="col-xs-1 col-md-1 col-md-offset-4">
+            <button type="submit" class="btn clearall btn-danger" value="AC">AC</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn clearlast btn-danger" value="CE">CE</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn num btn-warning" value=".">.</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn operator btn-warning" value="*">*</button>
+          </div>
         </div>
-        <div class="col-xs-1 col-md-1">
-          <button type="submit" class="btn clearlast red" value="CE">CE</button>
+        <div class="row">
+          <div class="col-xs-1 col-md-1 col-md-offset-4">
+            <button type="submit" class="btn num btn-info" value="7">7</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn num btn-info" value="8">8</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn num btn-info" value="9">9</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn operator btn-warning" value="-">-</button>
+          </div>
         </div>
-        <div class="col-xs-1 col-md-1">
-          <button type="submit" class="btn operator" value="/">÷</button>
+        <div class="row">
+          <div class="col-xs-1 col-md-1 col-md-offset-4">
+            <button type="submit" class="btn num btn-info" value="4">4</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn num btn-info" value="5">5</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn num btn-info" value="6">6</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn operator btn-warning" value="+">+</button>
+          </div>
         </div>
-        <div class="col-xs-1 col-md-1">
-          <button type="submit" class="btn operator" value="*">X</button>
+        <div class="row">
+          <div class="col-xs-1 col-md-1 col-md-offset-4">
+            <button type="submit" class="btn num btn-info" value="1">1</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn num btn-info" value="2">2</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn num btn-info" value="3">3</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn operator btn-warning" value="/">÷</button>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-1 col-md-1 col-md-offset-4">
-          <button type="submit" class="btn num" value="7">7</button>
-        </div>
-        <div class="col-xs-1 col-md-1">
-          <button type="submit" class="btn num" value="8">8</button>
-        </div>
-        <div class="col-xs-1 col-md-1">
-          <button type="submit" class="btn num" value="9">9</button>
-        </div>
-        <div class="col-xs-1 col-md-1">
-          <button type="submit" class="btn operator" value="-">-</button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-1 col-md-1 col-md-offset-4">
-          <button type="submit" class="btn num" value="4">4</button>
-        </div>
-        <div class="col-xs-1 col-md-1">
-          <button type="submit" class="btn num" value="5">5</button>
-        </div>
-        <div class="col-xs-1 col-md-1">
-          <button type="submit" class="btn num" value="6">6</button>
-        </div>
-        <div class="col-xs-1 col-md-1">
-          <button type="submit" class="btn operator" value="+">+</button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-1 col-md-1 col-md-offset-4">
-          <button type="submit" class="btn num" value="1">1</button>
-        </div>
-        <div class="col-xs-1 col-md-1">
-          <button type="submit" class="btn num" value="2">2</button>
-        </div>
-        <div class="col-xs-1 col-md-1">
-          <button type="submit" class="btn num" value="3">3</button>
-        </div>
-        <div class="col-xs-1 col-md-1">
-          <button type="submit" class="btn calculate" value="=">=</button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-2 col-md-2 col-md-offset-4">
-          <button type="submit" class="btn num" value="0">0</button>
-        </div>
-        <div class="col-xs-1 col-md-1">
-          <button type="submit" class="btn num" value=".">.</button>
+        <div class="row">
+          <div class="col-xs-1 col-md-1 col-md-offset-4">
+            <button type="submit" class="btn num btn-info" value="0">0</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn num btn-info" value="(">(</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn num btn-info" value=")">)</button>
+          </div>
+          <div class="col-xs-1 col-md-1">
+            <button type="submit" class="btn calculate btn-success" value="=">=</button>
+          </div>
         </div>
       </div>
 
