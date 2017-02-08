@@ -1,6 +1,8 @@
 $(document).ready(function() {
   $(".btn").click(function(){
     var btnVal = $(this).val()
+    var entryStr = $("#entry").text()
+    var histStr = $("#history").text()
     // var lastClicked = $(this).attr("class")
     // var entry = $("#entry").html()
     // var history = $("#history").html()
@@ -12,18 +14,18 @@ $(document).ready(function() {
       $("#history").append("= " + result);
     }
     else if ($(this).hasClass("clearall")) {
-      $("#entry").html("0");
-      $("#history").html("0");
+      clearall();
     }
     else if ($(this).hasClass("clearlast")) {
-      var arr = $("#history").text().split(/(\D)/g);
-      arr.pop();
-      var joinArr = arr.join('');
-      console.log("arr= " + joinArr);
-      // var arrJoin = arrPop.join();
-      // console.log("join: " + arrJoin);
-      $("#entry").html('0');
-      $("#history").html(joinArr);
+      if (histStr.includes("=")) {
+        clearall()
+      } else {
+        clearlast()
+      }
+    }
+    else if (/^[0-9.]/.test(entryStr) === false) {
+      $("#entry").html(btnVal);
+      $("#history").append(btnVal);
     }
     else if ($(this).hasClass("num")) {
       // console.log($("#entry").text())
@@ -39,6 +41,18 @@ $(document).ready(function() {
       $("#entry").html(btnVal);
       $("#history").append(btnVal);
     }
-    // console.log(history);
   })
 });
+
+function clearall() {
+  $("#entry").html("0");
+  $("#history").html("0");
+}
+
+function clearlast() {
+  var arr = $("#history").text().split(/(\D)/g);
+  arr.pop();
+  var joinArr = arr.join('');
+  $("#entry").html('0');
+  $("#history").html(joinArr);
+}
