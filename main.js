@@ -1,12 +1,10 @@
 $(document).ready(function() {
   $(".btn").click(function(){
+    //global variables
     var btnVal = $(this).val()
     var entryStr = $("#entry").text()
     var histStr = $("#history").text()
-    // var lastClicked = $(this).attr("class")
-    // var entry = $("#entry").html()
-    // var history = $("#history").html()
-
+    
     if ($(this).hasClass("calculate")) {
       result = eval($("#history").text());
       // console.log(result)
