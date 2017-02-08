@@ -17,20 +17,27 @@ table {
 
 td {
   padding: 5px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   text-align: center;
+}
+
+.btn {
+  box-shadow: 2px 2px 2px black;
+  width: 100%;
 }
 
 #calculator {
   border: 1px solid black;
   border-radius: 10px;
+  box-shadow: 5px 5px 5px gray;
+  background-color: #f4f4f4;
   min-width: 300px;
 }
 
 #display {
+  background-color: #fff;
   border: 1px solid black;
   margin: 10px;
-  background-color: #f4f4f4;
 }
 
 #entry {
