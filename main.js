@@ -10,9 +10,11 @@ $(document).ready(function() {
       $("#entry").html(result);
       $("#history").append("= " + result);
     }
+    // clear history and display
     else if ($(this).hasClass("clearall")) {
       clearall();
     }
+    // clear last from history
     else if ($(this).hasClass("clearlast")) {
       if (histStr.includes("=")) {
         clearall()
@@ -25,7 +27,6 @@ $(document).ready(function() {
       $("#history").append(btnVal);
     }
     else if ($(this).hasClass("num")) {
-      // console.log($("#entry").text())
       if ($("#history").text() === "0") {
         $("#entry").html(btnVal);
         $("#history").html(btnVal);
@@ -33,6 +34,7 @@ $(document).ready(function() {
         $("#entry").append(btnVal);
         $("#history").append(btnVal);
       }
+      console.log("Entry: " + btnVal)
     }
     else {
       $("#entry").html(btnVal);
