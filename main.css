@@ -38,12 +38,12 @@ td {
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 5px 5px 5px gray;
-  background-color: #f4f4f4;
-background-size:16px 16px;
+  background-color: #9e9e9e;
+  background-size:16px 16px;
   min-width: 300px;
 }
 
-#display {
+#screen {
   background-color: #fff;
   -moz-box-shadow:    inset 0 0 10px #000000;
   -webkit-box-shadow: inset 0 0 10px #000000;
@@ -52,7 +52,7 @@ background-size:16px 16px;
   margin: 10px 0 10px 0;
 }
 
-#entry {
+#output {
   font-size: 5rem;
   margin: 5px
 }

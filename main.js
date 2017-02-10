@@ -1,14 +1,42 @@
 $(document).ready(function() {
+  //global variables
+  var equation = '';
   $(".btn").click(function(){
-    //global variables
+    // get current button pressed
     var btnVal = $(this).val()
-    var entryStr = $("#entry").text()
-    var histStr = $("#history").text()
-
-    if ($(this).hasClass("calculate")) {
-      result = eval($("#history").text());
-      $("#entry").html(result);
-      $("#history").append("= " + result);
+    var lastValue = equation.charAt(equation.length-1)
+    // animate output on click
+    $("#output").hide();
+    $("#output").fadeIn(200);
+    if ($(this).hasClass("num")) {
+      // if last value of equation was an operator, a decimial or was blank, reset output
+      if (isNaN(lastValue) && lastValue !== '.' || equation === '') {
+        addToEquation(btnVal)
+        $("#output").html(btnVal);
+        $("#history").html(equation);
+      }
+      // otherwise append to the output
+      else {
+        addToEquation(btnVal)
+        $("#output").append(btnVal);
+        $("#history").html(equation);
+      }
+    }
+    else if ($(this).hasClass("operator")) {
+          switch(lastValue) {
+          case "+":
+          case "-":
+          case "*":
+          case "/":
+              alert("Error, last value was an operator")
+              break;
+          default:
+            addToEquation(btnVal)
+            $("#history").html(equation);
+      }
+    }
+    else if ($(this).hasClass("calculate")) {
+      calculate ()
     }
     // clear history and display
     else if ($(this).hasClass("clearall")) {
@@ -16,42 +44,59 @@ $(document).ready(function() {
     }
     // clear last from history
     else if ($(this).hasClass("clearlast")) {
-      if (histStr.includes("=")) {
+      if (equation.includes("=")) {
         clearall()
       } else {
         clearlast()
       }
     }
-    else if (/^[0-9.]/.test(entryStr) === false) {
-      $("#entry").html(btnVal);
-      $("#history").append(btnVal);
-    }
-    else if ($(this).hasClass("num")) {
-      if ($("#history").text() === "0") {
-        $("#entry").html(btnVal);
-        $("#history").html(btnVal);
-      } else {
-        $("#entry").append(btnVal);
-        $("#history").append(btnVal);
-      }
-      console.log("Entry: " + btnVal)
-    }
-    else {
-      $("#entry").html(btnVal);
-      $("#history").append(btnVal);
-    }
+    console.log("Equation: " + equation)
   })
+
+  function addToEquation (val) {
+    return equation += val
+  }
+
+  function calculate () {
+    var arr = equation.split(/([^0-9.])/g);
+    var result = Number(arr[0]);
+    for (var i = 1; i < arr.length; i++) {
+      var nextNum = Number(arr[i+1])
+      var symbol = arr[i];
+      switch (symbol) {
+        case "+":
+          result += nextNum;
+          break;
+        case "-":
+          result -= nextNum;
+          break;
+        case "*":
+          result *= nextNum;
+          break;
+        case "/":
+          result /= nextNum;
+          break;
+            alert("move to next number")
+            break;
+      }
+      i++
+    }
+    $("#output").html(result);
+    equation += '=' + result
+    $("#history").html(equation);
+  }
+
+  function clearall() {
+    equation = ''
+    $("#output").html("0");
+    $("#history").html("0");
+  }
+
+  function clearlast() {
+    var arr = equation.split(/(\D)/g);
+    arr.pop()
+    var joinArr = arr.join('');
+    $("#output").html('0');
+    $("#history").html(joinArr);
+  }
 });
-
-function clearall() {
-  $("#entry").html("0");
-  $("#history").html("0");
-}
-
-function clearlast() {
-  var arr = $("#history").text().split(/(\D)/g);
-  arr.pop();
-  var joinArr = arr.join('');
-  $("#entry").html('0');
-  $("#history").html(joinArr);
-}
